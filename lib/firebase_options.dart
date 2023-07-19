@@ -11,7 +11,7 @@ import 'package:flutter/foundation.dart'
 /// import 'firebase_options.dart';
 /// // ...
 /// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
+///   options: DefaultFirebaseOptions.curre5ntPlatform,
 /// );
 /// ```
 class DefaultFirebaseOptions {
@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '128582067514',
     projectId: 'blood-bank-5fdec',
     storageBucket: 'blood-bank-5fdec.appspot.com',
-    iosClientId: '128582067514-qb16ec18bs13afefrio1jrmekmj69m6l.apps.googleusercontent.com',
+    iosClientId:
+        '128582067514-qb16ec18bs13afefrio1jrmekmj69m6l.apps.googleusercontent.com',
     iosBundleId: 'com.example.bloodBank',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '128582067514',
     projectId: 'blood-bank-5fdec',
     storageBucket: 'blood-bank-5fdec.appspot.com',
-    iosClientId: '128582067514-101anc9ur3bui04sl93feqbdcc7gbhes.apps.googleusercontent.com',
+    iosClientId:
+        '128582067514-101anc9ur3bui04sl93feqbdcc7gbhes.apps.googleusercontent.com',
     iosBundleId: 'com.example.bloodBank.RunnerTests',
   );
 }
