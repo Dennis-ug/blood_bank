@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/size_gen.dart';
@@ -17,7 +16,7 @@ class DashView extends StatelessWidget {
           Container(
             width: size.wyt(230),
             height: double.infinity,
-            color: Color(0xffE0222B),
+            color: const Color(0xffE0222B),
           ),
           Expanded(
             child: PageView(
@@ -150,7 +149,7 @@ class RecentCollections extends StatelessWidget {
     return Container(
       width: 841,
       height: 508,
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
@@ -226,7 +225,7 @@ class RecentCollections extends StatelessWidget {
                 height: 40,
                 width: 100,
                 decoration: BoxDecoration(
-                  color: Color(0xffE0222B),
+                  color: const Color(0xffE0222B),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
@@ -301,7 +300,8 @@ class StatCard extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-                color: Color(0xff2D070A).withOpacity(0.4), blurRadius: 19),
+                color: const Color(0xff2D070A).withOpacity(0.4),
+                blurRadius: 19),
           ]),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 50),

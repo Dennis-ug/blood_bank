@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../utils/db.dart';
 
 class UpdateView extends StatelessWidget {
   UpdateView({super.key});
@@ -20,6 +21,7 @@ class UpdateView extends StatelessWidget {
     fontWeight: FontWeight.w400,
     color: const Color(0xff160304).withOpacity(0.4),
   );
+  final TextEditingController station = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,10 +86,61 @@ class UpdateView extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomRight,
                 child: GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => UpdateView())),
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            backgroundColor: Colors.white,
+                            title: Text(
+                              "Add collection site",
+                              style: GoogleFonts.poppins(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
+                              ),
+                            ),
+                            content: SizedBox(
+                              height: 200,
+                              child: Column(
+                                children: [
+                                  TextFormField(),
+                                  // TextFormField(),
+                                  SizedBox(
+                                    height: 24,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      final db = DbHelper();
+                                      if (station.text.isNotEmpty) {
+                                        db.createStation(station.text);
+                                      }
+                                    },
+                                    child: Container(
+                                      height: 40,
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xffE0222B),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          'Add',
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        });
+                  },
                   child: Container(
                     height: 40,
                     width: 300,
