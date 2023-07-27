@@ -39,10 +39,34 @@ dependencies:
   google_fonts: ^5.1.0
   cloud_firestore: ^4.8.3
   flutter_typeahead: ^4.6.2
+  hive: ^2.2.3
+  hive_flutter:
+  intl: ^0.18.1
 
 dev_dependencies:
+  hive_generator: 
+  build_runner:
+  flutter_launcher_icons: "^0.13.1" 
   flutter_test:
     sdk: flutter
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/504174.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "/Volumes/Media Disk/work/2023/blood_bank/assets/504174.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "/Volumes/Media Disk/work/2023/blood_bank/assets/504174.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "/Volumes/Media Disk/work/2023/blood_bank/assets/504174.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
